@@ -1,0 +1,64 @@
+name        = FUDCon Pune
+core       = 6.x
+base theme = zen
+stylesheets[all][]   = css/html-reset.css
+stylesheets[all][]   = css/wireframes.css
+stylesheets[all][]   = css/layout-fixed.css
+stylesheets[all][]   = css/page-backgrounds.css
+stylesheets[all][]   = css/tabs.css
+stylesheets[all][]   = css/messages.css
+stylesheets[all][]   = css/pages.css
+stylesheets[all][]   = css/block-editing.css
+stylesheets[all][]   = css/blocks.css
+stylesheets[all][]   = css/navigation.css
+stylesheets[all][]   = css/panels-styles.css
+stylesheets[all][]   = css/views-styles.css
+stylesheets[all][]   = css/nodes.css
+stylesheets[all][]   = css/comments.css
+stylesheets[all][]   = css/forms.css
+stylesheets[all][]   = css/fields.css
+stylesheets[all][] = css/superfish.css
+stylesheets[print][] = css/print.css
+; stylesheets[handheld][] = css/mobile.css
+; stylesheets[only screen and (max-device-width: 480px)][] = css/iphone.css
+
+  ; Set the conditional stylesheets that are processed by IE.
+conditional-stylesheets[if IE][all][]       = css/ie.css
+conditional-stylesheets[if lte IE 6][all][] = css/ie6.css
+
+; scripts[] = js/script.js
+scripts[] = js/jquery-1.2.6.min.js
+scripts[] = js/hoverIntent.js
+scripts[] = js/superfish.js
+
+regions[sidebar_first]  = First sidebar
+regions[navigation]     = Navigation bar
+regions[splash_left]					= Splash Left
+regions[splash_right]					= Splash Right
+regions[content_top]    = Content top
+regions[content_bottom] = Content bottom
+regions[footer_first]       = Footer First Column
+regions[footer_second]      = Footer Second Column
+regions[footer_third]       = Footer Third Column
+regions[footer_fourth]      = Footer Fourth Column
+regions[footer]     		    = Footer
+
+features[] = logo
+features[] = name
+features[] = slogan
+features[] = mission
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = search
+features[] = favicon
+features[] = primary_links
+features[] = secondary_links
+
+settings[zen_block_editing]        = 1
+settings[zen_breadcrumb]           = yes
+settings[zen_breadcrumb_separator] = ' › '
+settings[zen_breadcrumb_home]      = 1
+settings[zen_breadcrumb_trailing]  = 1
+settings[zen_breadcrumb_title]     = 0
+settings[zen_rebuild_registry]     = 1
+settings[zen_wireframes]           = 0
