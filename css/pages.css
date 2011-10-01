@@ -1,308 +1,615 @@
-@charset "UTF-8";
-/* CSS Document */
+/**
+ * @file
+ * Page Styling
+ *
+ * Style the markup found in page.tpl.php. Also includes some styling of
+ * miscellaneous Drupal elements that appear in the $content variable, such as
+ * ul.links, .pager, .more-link, etc.
+ */
 
 
-html, body, div, span, applet, object, iframe,
-h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, sub, sup, tt, var,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td {
-	margin:0;
-	padding:0;
-	border:0;
-	outline:0;
-	font-weight:inherit;
-	font-style:inherit;
-	font-size:100%;
-	font-family:inherit;
-	vertical-align:baseline;
+/*
+ * Body
+ */
+body {
+  margin: 0;
+  padding: 0;
 }
 
+#page-wrapper {
+}
+
+#page {
+}
+
+/*
+ * The skip navigation link will be completely hidden until a user tabs to the
+ * link. See http://www.webaim.org/techniques/skipnav/
+ */
+#skip-link a,
+#skip-link a:visited {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: -500px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #666;
+  color: #fff;
+}
+
+#skip-link a:hover,
+#skip-link a:active,
+#skip-link a:focus {
+  position: static;
+  width: 100%;
+  height: auto;
+  padding: 2px 0 3px 0;
+}
+
+/*
+ * Header
+ */
+#header {
+}
+
+#header .section {
+}
+
+#logo /* Wrapping link for logo */ {
+  float: left; /* LTR */
+  margin: 0;
+  padding: 0;
+}
+
+#logo img {
+  vertical-align: bottom;
+}
+
+#name-and-slogan /* Wrapper for website name and slogan */ {
+}
+
+h1#site-name,
+div#site-name /* The name of the website */ {
+  margin: 0;
+  font-size: 2em;
+  line-height: 1.3em;
+}
+
+#site-name a:link,
+#site-name a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+#site-name a:hover,
+#site-name a:focus {
+  text-decoration: underline;
+}
+
+#site-slogan /* The slogan (or tagline) of a website */ {
+}
+
+.region-header /* Wrapper for any blocks placed in the header region */ {
+}
+
+/*
+ * Main (container for everything else)
+ */
+#main-wrapper {
+}
+
+#main {
+}
+
+/*
+ * Content
+ */
+#content {
+}
+
+#content .section {
+}
+
+#mission /* The mission statement of the site (displayed on homepage) */ {
+}
+
+.region-content-top /* Wrapper for any blocks placed in the "content top" region */ {
+}
+
+.breadcrumb /* The path to the current page in the form of a list of links */ {
+  padding-bottom: 0; /* Undo system.css */
+}
+
+h1.title, /* The title of the page */
+h2.title, /* Block title or the title of a piece of content when it is given in a list of content */
+h3.title /* Comment title */ {
+  margin: 0;
+}
+
+tr.even /* Some tables have rows marked even or odd. */ {
+  /* background-color: #eee; */ /* Drupal core uses a #eee background */
+}
+
+tr.odd {
+  /* background-color: #eee; */ /* Drupal core uses a #eee background */
+}
+
+div.messages /* Important messages (status, warning, and error) for the user. See also the declarations in messages.css. */ {
+}
+
+div.status /* Normal priority messages */ {
+}
+
+div.warning,
+tr.warning /* Medium priority messages */ {
+  /* border: 1px solid #f0c020; */ /* Drupal core uses: 1px solid #f0c020 */
+}
+
+div.error,
+tr.error /* High priority messages. See also the .error declaration below. */ {
+}
+
+.error /* Errors that are separate from div.messages status messages. */ {
+  /* color: #e55; */ /* Drupal core uses a #e55 background */
+}
+
+.warning /* Warnings that are separate from div.messages status messages. */ {
+  /* color: #e09010; */ /* Drupal core uses a #e09010 background */
+}
+
+div.tabs /* See also the tabs.css file. */ {
+}
+
+.help /* Help text on a page */ {
+  margin: 1em 0;
+}
+
+.more-help-link /* Link to more help */ {
+  font-size: 0.85em;
+  text-align: right;
+}
+
+#content-area /* Wrapper for the actual page content */ {
+}
+
+ul.links /* List of links */ {
+  margin: 1em 0;
+  padding: 0;
+}
+
+ul.links.inline {
+  margin: 0;
+  display: inline;
+}
+
+ul.links li {
+  display: inline;
+  list-style-type: none;
+  padding: 0 0.5em;
+}
+
+.pager /* A list of page numbers when more than 1 page of content is available */ {
+  clear: both;
+  margin: 1em 0;
+  text-align: center;
+}
+
+.pager a,
+.pager strong.pager-current /* Each page number in the pager list */ {
+  padding: 0.5em;
+}
+
+.feed-icons /* The links to the RSS or Atom feeds for the current list of content */ {
+  margin: 1em 0;
+}
+
+.more-link /* Aggregator, blog, and forum more link */ {
+  text-align: right; /* LTR */
+}
+
+.region-content-bottom /* Wrapper for any blocks placed in the "content bottom" region */ {
+}
+
+/*
+ * First sidebar (on left in LTR languages, on right in RTL)
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-first
+ * (see the layout.css file.)
+ */
+.region-sidebar-first {
+}
+
+.region-sidebar-first .section {
+}
+
+/*
+ * Second sidebar (on right in LTR languages, on left in RTL)
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-second
+ * (see the layout.css file.)
+ */
+.region-sidebar-second {
+}
+
+.region-sidebar-second .section {
+}
+
+/*
+ * Footer
+ */
+#footer {
+}
+
+#footer .section {
+}
+
+#footer-message /* Wrapper for the footer message from Drupal's "Site information"
+                   and for any blocks placed in the footer region */ {
+}
+
+.region-footer {
+}
+
+/*
+ * Closure
+ */
+.region-page-closure /* Wrapper for any blocks placed in the closure region */ {
+}
+
+/*
+ * Drupal boxes
+ *
+ * Wrapper for Comment form, Comment viewing options, Menu admin, and
+ * Search results.
+ */
+.box /* Wrapper for box */ {
+}
+
+.box h2 /* Box title */ {
+}
+
+.box .content /* Box's content wrapper */ {
+}
+
+/*
+ * Markup free clearing (See: http://www.positioniseverything.net/easyclearing.html )
+ */
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/**
+ * Hide elements from all users.
+ *
+ * Used for elements which should not be immediately displayed to any user. An
+ * example would be a collapsible fieldset that will be expanded with a click
+ * from a user. The effect of this class can be toggled with the jQuery show()
+ * and hide() functions.
+ */
+.element-hidden {
+  display: none;
+}
+
+/**
+ * Hide elements visually, but keep them available for screen-readers.
+ *
+ * Used for information required for screen-reader users to understand and use
+ * the site where visual display is undesirable. Information provided in this
+ * manner should be kept concise, to avoid unnecessary burden on the user. Must
+ * not be used for focusable elements (such as links and form elements) as this
+ * causes issues for keyboard only or voice recognition users. "!important" is
+ * used to prevent unintentional overrides.
+ */
+.element-invisible {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/**
+New CSS for FUDCon theme.
+*/
 
 body {
+	margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  vertical-align:baseline;
+
 	font:14px/1.5 Arial, Helvetica, sans-serif;
-	color:#888;
-	background-color:#FFF;
+  color:#888;
+  background-color:#FFF;
+}
+
+.container {
+	width:100%;
+  min-width: 960px;
+  height:100%;
 }
 
 a, a:visited {
-	color:#0956A4;
-	text-decoration:none;
-	/*border-bottom:1px dotted #CCC;*/
+  color:#0956A4;
+  text-decoration:none;
+  /*border-bottom:1px dotted #CCC;*/
 }
 a:hover, a:active {
-	color:#0956A4;
-	text-decoration:none;
+  color:#0956A4;
+  text-decoration:none;
 }
 
 
 h1 {
-	font-family:Arial, Helvetica, sans-serif;
-	font-weight:bold;
-	font-size:28px;
-	color:#FFF;
-	margin-top:10px;
-	margin-bottom:10px;
-	padding:0px;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight:bold;
+  font-size:28px;
+  color:#FFF;
+  margin-top:10px;
+  margin-bottom:10px;
+  padding:0px;
 }
 
 h2 {
-	font:14px/1.6 Arial, Helvetica, sans-serif;
-	color:#729FCF;
-	padding:0px;
-	margin-top:5px;
+  font:14px/1.6 Arial, Helvetica, sans-serif;
+  color:#729FCF;
+  padding:0px;
+  margin-top:5px;
 }
 
 h3 {
-	font:21px Arial, Helvetica, sans-serif;
-	color:#0956A4;
-	margin-bottom:8px;
-	padding:0px;
+  font:21px Arial, Helvetica, sans-serif;
+  color:#0956A4;
+  margin-bottom:8px;
+  padding:0px;
 }
 
 h4 {
-	font:21px Arial, Helvetica, sans-serif;
-	font-weight:bold;
-	color:#0956A4;
-	margin-bottom:6px;
-	padding:0px;
+  font:21px Arial, Helvetica, sans-serif;
+  font-weight:bold;
+  color:#0956A4;
+  margin-bottom:6px;
+  padding:0px;
 }
 
 h5 {
-	font:16px Arial, Helvetica, sans-serif;
-	color:#FFF;
-	margin-bottom:6px;
-	padding:0px;
+  font:16px Arial, Helvetica, sans-serif;
+  color:#FFF;
+  margin-bottom:6px;
+  padding:0px;
 }
 
 h6 {
-	font:21px Arial, Helvetica, sans-serif;
-	font-weight:bold;
-	color:#3FA9F5;
-	margin-bottom:6px;
-	padding:0px;
+  font:21px Arial, Helvetica, sans-serif;
+  font-weight:bold;
+  color:#3FA9F5;
+  margin-bottom:6px;
+  padding:0px;
 }
 
 p {
-	margin-bottom:10px;
+  margin-bottom:10px;
 }
 
 li {
-	list-style:square;
-	font-size:12px;
+  list-style:square;
+  font-size:12px;
 }
 
 ul {
 }
 
 .container {
-	width:100%;
-	min-width: 960px;
-	height:100%;
+  width:100%;
+  min-width: 960px;
+  height:100%;
 }
 
 /* ========================== HEADER ===================================*/
 
 .header_bar {
-	width:100%;
-	/* background-image:url(../images/header_bar.png); */
-	height:110px;
-	min-width: 960px;
+  width:100%;
+  /* background-image:url(../images/header_bar.png); */
+  height:110px;
+  min-width: 960px;
 }
 
 .header {
-	width:955px;
-	margin-left:auto;
-	margin-right:auto;
-	height:82px;
-	padding-top:10px;
-	padding-left:5px;
+  width:955px;
+  margin-left:auto;
+  margin-right:auto;
+  height:82px;
+  padding-top:10px;
+  padding-left:5px;
 }
 
 .logo_top {
-	width:auto;
-	height:100%;
-	float:left;
+  width:auto;
+  height:100%;
+  float:left;
 }
 
 .main_menu {
-	width: auto;
-	min-width: 200px;
-	max-width: 500px;
-	height: 100px;
-	float: right;
+  width: auto;
+  min-width: 200px;
+  max-width: 500px;
+  height: 100px;
+  float: right;
 }
 
 /* ============================== SPLASH BANNER =========================== */
 
 .splash_container {
-	padding-top:8px;
-	padding-bottom:8px;
-	float:left;
-	width:100%;
-	min-width: 960px;
-	background:url(../images/fudcon/splash_bg.png);
-	border-bottom:#999 thin solid;
-	max-height: 266px;
+  padding-top:8px;
+  padding-bottom:8px;
+  float:left;
+  width:100%;
+  min-width: 960px;
+  background:url(../images/fudcon/splash_bg.png);
+  border-bottom:#999 thin solid;
+  max-height: 266px;
 }
 
 .splash_content {
-	width:960px;
-	height: auto;
-	margin-left: auto;
-	margin-right: auto;
+  width:960px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .splash_text {
-	width:35%;
-	height: auto;
-	max-height: 266px;
-	float:left;
+  width:35%;
+  height: auto;
+  max-height: 266px;
+  float:left;
 }
 
 .splash_text_complete {
-	width: 100%;
+  width: 100%;
 }
 
 .splash_img_mil {
-	width:64%;
-	height:auto;
-	float:right;
+  width:64%;
+  height:auto;
+  float:right;
 }
 
 /*============================ CENTRAL CONTENT =========================*/
 
 .central_container {
-	width:100%;
-	min-width: 960px;
-	/*height:422px;*/
-	border-bottom:#999 thin solid;
-	border-top:#ccc thin solid;
-	float:left;
-	padding-bottom: 20px;
+  width:100%;
+  min-width: 960px;
+  /*height:422px;*/
+  border-bottom:#999 thin solid;
+  border-top:#ccc thin solid;
+  float:left;
+  padding-bottom: 20px;
 }
 
 .central_content {
-	width:960px;
-	height: auto;
-	margin-left:auto;
-	margin-right:auto;
-	margin-top:1px;
+  width:960px;
+  height: auto;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:1px;
 }
 
 .content_container {
-	width: 70%;
-	height: auto;
-	float: left;
+  width: 70%;
+  height: auto;
+  float: left;
 }
 
 .content {
-	width: 100%;
-	height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .content-area {
-	height: auto;
+  height: auto;
 }
 
 .sidebar_first {
-	width: 26%;
-	float: right;
+  width: 26%;
+  float: right;
 }
 
 #home {
-	padding-top:10px;
+  padding-top:10px;
 }
 
 /*============================== FOOTER ==========================*/
 
 .footer_container {
-	width:100%;
-	min-width: 960px;
-	background-image:url(../images/fudcon/footer_bg.png);
-	background-repeat:repeat-x;
-	height: auto;
-	max-height:230px;
-	padding-bottom: 10px;
-	padding-top: 10px;
-	float:left;
+  width:100%;
+  min-width: 960px;
+  background-image:url(../images/fudcon/footer_bg.png);
+  background-repeat:repeat-x;
+  height: auto;
+  max-height:230px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  float:left;
 }
 
 .footer_content {
-	width:960px;
-	margin-left:auto;
-	margin-right:auto;
+  width:960px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .footer_contact_item {
-	width:22.75%;
-	height:24px;
-	float:left;
-	/*padding-right:4px;*/
-	margin-right:3%;
-	padding-bottom:10px;
-	font-family:Arial, Helvetica, sans-serif;
-	color:#FFF;
-	font-size:14px;
-	vertical-align:middle;
+  width:22.75%;
+  height:24px;
+  float:left;
+  /*padding-right:4px;*/
+  margin-right:3%;
+  padding-bottom:10px;
+  font-family:Arial, Helvetica, sans-serif;
+  color:#FFF;
+  font-size:14px;
+  vertical-align:middle;
 }
 
 .footer {
-	width: 100%;
-	min-width: 960px;
-	height: auto;
+  width: 100%;
+  min-width: 960px;
+  height: auto;
 }
 
 #tel {
-	background-image:url(../images/fudcon/tel_footer.png);
-	background-repeat:no-repeat;
-	padding-left:30px;
+  background-image:url(../images/fudcon/tel_footer.png);
+  background-repeat:no-repeat;
+  padding-left:30px;
 }
 
 #twitter {
-	background-image:url(../images/fudcon/twitter_footer.png);
-	background-repeat:no-repeat;
-	padding-left:30px;
+  background-image:url(../images/fudcon/twitter_footer.png);
+  background-repeat:no-repeat;
+  padding-left:30px;
 }
 
 #facebook {
-	background-image:url(../images/fudcon/facebook_footer.png);
-	background-repeat:no-repeat;
-	padding-left:30px;
+  background-image:url(../images/fudcon/facebook_footer.png);
+  background-repeat:no-repeat;
+  padding-left:30px;
 }
 
 #mail {
-	background-image:url(../images/fudcon/mailto_footer.png);
-	background-repeat:no-repeat;
-	padding-left:30px;
+  background-image:url(../images/fudcon/mailto_footer.png);
+  background-repeat:no-repeat;
+  padding-left:30px;
 }
 
 #rss {
-	background-image:url(../images/fudcon/rssfeed_footer.png);
-	background-repeat:no-repeat;
-	padding-left:30px;
+  background-image:url(../images/fudcon/rssfeed_footer.png);
+  background-repeat:no-repeat;
+  padding-left:30px;
 }
 
 .button_container {
-	float:right;
-	position:relative;
-	height:100%;
+  float:right;
+  position:relative;
+  height:100%;
 }
 
 .newsletter_input {
-	width:200px;
-	height:40px;
-	border-radius:10px;
-	border:#06C medium solid;
+  width:200px;
+  height:40px;
+  border-radius:10px;
+  border:#06C medium solid;
 }
 
 /*============================== ELEMENTS ==========================*/
 
 .title {
-	font-size: 30px;
-	text-transform: uppercase;
-	color: #729FCF;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #729FCF;
 }

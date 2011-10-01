@@ -155,7 +155,7 @@ function fudcon_preprocess_block(&$vars, $hook) {
 // */
 
 function fudcon_filter_menu_tree($menu_name) {
-	$tree = menu_tree_all_data($menu_name);
+  $tree = menu_tree_all_data($menu_name);
   $final = array();
   foreach($tree as $link) {
     $item = $link['link'];
@@ -163,12 +163,12 @@ function fudcon_filter_menu_tree($menu_name) {
     $below = array();
     if ($link['below']) {
       foreach($link['below'] as $blink) {
-				if (!empty($blink['link']['title'])) {
-      	  $below[] = array(
-    	      'href' => $blink['link']['href'],
-  	        'title' =>  $blink['link']['title'],
-	        );
-				}
+        if (!empty($blink['link']['title'])) {
+          $below[] = array(
+            'href' => $blink['link']['href'],
+            'title' =>  $blink['link']['title'],
+          );
+        }
       }
     }
 
@@ -179,5 +179,5 @@ function fudcon_filter_menu_tree($menu_name) {
     );
   }
 
-	return $final;
+  return $final;
 }
