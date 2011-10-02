@@ -453,9 +453,9 @@ ul {
   min-width: 960px;
   background:url(../images/fudcon/splash_bg.png);
   max-height: 266px;
+	border-bottom: #ccc thin solid;
 
 	position: relative;
-	z-index: 100;
 }
 
 .splash_content {
@@ -499,7 +499,6 @@ ul {
   min-width: 960px;
   /*height:422px;*/
   border-bottom:#999 thin solid;
-  border-top:#ccc thin solid;
   float:left;
   padding-bottom: 20px;
 	position: relative;
@@ -530,7 +529,7 @@ ul {
 }
 
 .sidebar_first {
-  width: 30%;
+  width: 28%;
   float: right;
 }
 
