@@ -117,7 +117,7 @@
   <?php print $scripts; ?>
 	<script type="text/javascript"> 
     $(document).ready(function() {
-      $("#superfish ul.menu").superfish();
+      $("#superfish-menu ul.menu").superfish();
     });
   </script>
 </head>
@@ -133,21 +133,21 @@
         <div class="main_menu">
           <?php if ($primary_links): ?>
             <?php $menu = fudcon_filter_menu_tree('primary-links'); ?>
-						<div id="superfish">
-            <ul class="sf-menu">
-              <?php foreach($menu as $link): ?>
-                <li>
-                  <a href="<?php echo $link['href']; ?>"><?php echo $link['title']; ?></a>
-                  <?php if ($link['below']): ?>
-                    <ul>
-                      <?php foreach($link['below'] as $blink): ?>
-                        <li><a href="<?php echo $blink['href']; ?>"><?php echo $blink['title']; ?></a></li>
-                      <?php endforeach; ?>
-                    </ul>
-                  <?php endif; ?>
-                </li>
-              <?php endforeach; ?>
-            </ul>
+						<div id="superfish-menu">
+      	      <ul class="sf-menu">
+    	          <?php foreach($menu as $link): ?>
+  	              <li>
+	                  <a href="<?php echo $link['href']; ?>"><?php echo $link['title']; ?></a>
+                  	<?php if ($link['below']): ?>
+                	    <ul>
+              	        <?php foreach($link['below'] as $blink): ?>
+            	            <li><a href="<?php echo $blink['href']; ?>"><?php echo $blink['title']; ?></a></li>
+          	            <?php endforeach; ?>
+        	            </ul>
+      	            <?php endif; ?>
+    	            </li>
+  	            <?php endforeach; ?>
+	            </ul>
 						</div>
           <?php endif; ?>
         </div>
