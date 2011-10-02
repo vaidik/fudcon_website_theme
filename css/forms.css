@@ -10,6 +10,13 @@
   margin: 1em 0;
 }
 
+.form-text {
+	padding: 8px 7px;
+	border: 3px solid #e2e2e2;
+	margin-bottom: 4px;
+	width: 210px;
+}
+
 .form-item input.error,
 .form-item textarea.error,
 .form-item select.error /* Highlight the form elements that caused a form submission error */ {
@@ -39,7 +46,37 @@
   margin: 0.4em 0;
 }
 
-.form-submit /* The submit button */ {
+.form-submit { }
+
+input[type="submit"], input[type="button"], input[type="reset"] {
+	color: #fff;
+	background: #294172;
+	text-decoration: none;
+	-moz-box-shadow: 0 1px 3px #272727;
+	-webkit-box-shadow: 0 1px 3px #272727;
+	box-shadow: 0 1px 3px #272727;
+
+	border: none;
+	cursor: pointer;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: #000 0 -1px 0;
+	padding: 7px 15px 7px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+	-webkit-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+}
+
+input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hover {
+  color: #fff;
+	background: #2D4C8C;
+	-moz-box-shadow: 0 1px 3px #272727;
+	-webkit-box-shadow: 0 1px 3px #272727;
+	box-shadow: 0 1px 3px #272727;
 }
 
 .container-inline div,
