@@ -137,7 +137,7 @@ body {
  */
 .region-sidebar-first {
   float: left; /* LTR */
-  width: 200px;
+  width: 100%;
   margin-left: 0; /* LTR */
   margin-right: -200px; /* LTR */ /* Negative value of .region-sidebar-first's width + left margin. */
   padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-first .section. */
@@ -145,22 +145,6 @@ body {
 
 .region-sidebar-first .section {
   margin: 0 20px 0 0; /* LTR */
-  padding: 0;
-}
-
-/*
- * Second sidebar
- */
-.region-sidebar-second {
-  float: left; /* LTR */
-  width: 200px;
-  margin-left: 760px; /* LTR */ /* Width of content + sidebar-first. */
-  margin-right: -960px; /* LTR */ /* Negative value of .region-sidebar-second's width + left margin. */
-  padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-second .section. */
-}
-
-.region-sidebar-second .section {
-  margin: 0 0 0 20px; /* LTR */
   padding: 0;
 }
 

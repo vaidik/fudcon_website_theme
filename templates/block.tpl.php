@@ -62,5 +62,5 @@
     <?php print $content; ?>
   </div>
 
-  <div><?php print $edit_links; ?></div>
+  <?php print $edit_links; ?>
 </div><!-- /.block -->

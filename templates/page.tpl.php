@@ -157,7 +157,7 @@
 		<?php if ($splash_left || $splash_right): ?>
     <div class="splash_container">
       <div class="splash_content">
-        <div class="splash_text<?php if (!$splash_right) { echo " splash_text_complete"; } ?>">
+        <div id="splash_text"<?php if (!$splash_right) { echo " class=\"splash_text_complete\""; } ?>>
           <?php echo $splash_left; ?>
         </div>
         <div class="splash_img_mil">

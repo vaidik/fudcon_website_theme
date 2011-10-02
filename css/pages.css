@@ -463,15 +463,25 @@ ul {
   margin-right: auto;
 }
 
-.splash_text {
+#splash_text {
   width:35%;
   height: auto;
   max-height: 266px;
   float:left;
+
+	color: #729FCF;
 }
 
 .splash_text_complete {
   width: 100%;
+}
+
+#splash_text h2 {
+  color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 28px;
+	text-transform: capitalize;
 }
 
 .splash_img_mil {
@@ -501,7 +511,7 @@ ul {
 }
 
 .content_container {
-  width: 70%;
+  width: 68%;
   height: auto;
   float: left;
 }
@@ -516,7 +526,7 @@ ul {
 }
 
 .sidebar_first {
-  width: 26%;
+  width: 30%;
   float: right;
 }
 
