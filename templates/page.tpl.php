@@ -169,6 +169,7 @@
     <?php endif; ?>
 
     <div class="central_container">
+			<div style="height: 36px;"></div>
       <div class="central_content">
         <?php if ($title): ?>
           <h1 class="title"><?php print $title; ?></h1>
