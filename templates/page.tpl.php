@@ -123,6 +123,21 @@
 </head>
 <?php global $theme_path;  ?>
 <body class="<?php print $classes; ?>">
+	<div class="top_bar_container">
+		<div id="top_bar">
+			<div class="user_menu">
+				<?php global $user; ?>
+				<?php
+					if ($user->uid == 0) {
+						echo '<strong>' . l(t('Login'), 'user') . ' &nbsp;&nbsp;&nbsp;&nbsp; ' . l(t('Register'), 'user/register') . '</strong>';
+					} else {
+						echo t('Welcome ') . '<strong>' . l($user->name, 'user') . '</strong>! &nbsp;&nbsp;&nbsp;&nbsp; ' . l(t('Logout'), 'logout');
+					}
+				?>
+        <?php echo $search_box; ?>
+			</div>
+		</div>
+	</div>
 
   <div id="container">
 		<div class="header_bar">
@@ -131,6 +146,7 @@
           <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php echo $theme_path . '/images/fudcon/logo-pune-long.png'; ?>" height="82" /></a>
         </div>
         <div class="main_menu">
+
           <?php if ($primary_links): ?>
             <?php $menu = fudcon_filter_menu_tree('primary-links'); ?>
 						<div id="superfish-menu">
@@ -162,14 +178,16 @@
         </div>
         <div class="splash_img_mil">
           <?php echo $splash_right; ?>
-          <!--<img src="<?php echo $theme_path . '/images/fudcon/FudconPune.png'; ?>" />-->
         </div>
       </div>
     </div>
     <?php endif; ?>
 
+		<div style="clear: both;"></div>
+		<div style="border-top: 1px solid #ccc; height: 35px;"></div>
+
     <div class="central_container">
-			<div style="height: 36px;"></div>
+
       <div class="central_content">
         <?php if ($title): ?>
           <h1 class="title"><?php print $title; ?></h1>

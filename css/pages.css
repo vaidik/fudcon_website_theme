@@ -329,6 +329,25 @@ body {
   background-color:#FFF;
 }
 
+.top_bar_container {
+	background: #1a2846;
+	padding-top: 2px;
+	padding-bottom: 1px;
+}
+
+#top_bar {
+	width:955px;
+  margin-left:auto;
+  margin-right:auto;
+
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+#top_bar a {
+	color: white;
+}
+
 .container {
 	width:100%;
   min-width: 960px;
@@ -443,6 +462,52 @@ ul {
   float: right;
 }
 
+.user_menu {
+	text-align: right;
+	color: #e2e2e2;
+}
+
+#search-theme-form {
+	display: inline-block;
+	margin-left: 20px;
+}
+
+#search-theme-form input[type="text"] {
+	padding: 3px;
+	background: #34466a;
+	font-size: 11px;
+	border: 0;
+	width: 200px;
+
+	color: white;
+}
+
+#search-theme-form input[type="submit"] {
+	margin-left: -7px;
+	padding: 3px;
+	width: 24px;
+
+	font-size: 11px;
+	color: black;
+
+	border: 0;
+	background: #34466a;
+	background-image: url('../images/fudcon/search.jpg');
+
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	text-shadow: none;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
+
+	text-indent: -75px;
+}
+
+#search-theme-form input:focus {
+	outline: none;
+}
+
 /* ============================== SPLASH BANNER =========================== */
 
 .splash_container {
@@ -453,9 +518,9 @@ ul {
   min-width: 960px;
   background:url(../images/fudcon/splash_bg.png);
   max-height: 266px;
-	border-bottom: #ccc thin solid;
 
 	position: relative;
+	z-index: 0;
 }
 
 .splash_content {
@@ -498,7 +563,7 @@ ul {
   width:100%;
   min-width: 960px;
   /*height:422px;*/
-  border-bottom:#999 thin solid;
+  border-bottom: #999 thin solid;
   float:left;
   padding-bottom: 20px;
 	position: relative;
