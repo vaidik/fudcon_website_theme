@@ -147,7 +147,7 @@
 		<div class="header_bar">
       <div class="header">
         <div class="logo_top">
-          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php echo $theme_path . '/images/fudcon/logo-pune-long.png'; ?>" height="82" /></a>
+          <a href="<?php print $front_page; ?>" title="FUDCon Pune 2011" rel="home" id="logo"><img src="<?php echo drupal_get_path('theme', 'fudcon') . '/images/fudcon/logo-pune-long.png'; ?>" height="82" /></a>
         </div>
         <div class="main_menu">
 
@@ -157,11 +157,13 @@
       	      <ul class="sf-menu">
     	          <?php foreach($menu as $link): ?>
   	              <li>
-	                  <a href="<?php echo $link['href']; ?>"><?php echo $link['title']; ?></a>
+										<?php
+											echo l($link['title'], $link['href']);
+										?>
                   	<?php if ($link['below']): ?>
                 	    <ul>
               	        <?php foreach($link['below'] as $blink): ?>
-            	            <li><a href="<?php echo $blink['href']; ?>"><?php echo $blink['title']; ?></a></li>
+            	            <li><?php echo l($blink['title'], $blink['href']); ?></li>
           	            <?php endforeach; ?>
         	            </ul>
       	            <?php endif; ?>
