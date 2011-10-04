@@ -121,7 +121,9 @@
     });
   </script>
 </head>
+
 <?php global $theme_path;  ?>
+
 <body class="<?php print $classes; ?>">
 	<div class="top_bar_container">
 		<div id="top_bar">

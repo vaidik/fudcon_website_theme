@@ -183,3 +183,6 @@ function fudcon_filter_menu_tree($menu_name) {
 
   return $final;
 }
+
+drupal_add_js(drupal_get_path('theme', 'fudcon') . '/js/jquery.autofill.js');
+drupal_add_js(drupal_get_path('theme', 'fudcon') . '/js/searchbox.js');

@@ -482,10 +482,10 @@ ul {
 	font-size: 11px;
 	border: 0;
 
-	width: 200px;
+	width: 160px;
 	height: 13px;
 
-	color: white;
+	color: #fff;
 }
 
 #search-theme-form input[type="submit"] {
