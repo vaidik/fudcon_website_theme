@@ -127,6 +127,7 @@
 		<div id="top_bar">
 			<div class="user_menu">
 				<?php global $user; ?>
+				<div style="display: inline-block; padding-top: 2px;">
 				<?php
 					if ($user->uid == 0) {
 						echo '<strong>' . l(t('Login'), 'user') . ' &nbsp;&nbsp;&nbsp;&nbsp; ' . l(t('Register'), 'user/register') . '</strong>';
@@ -134,6 +135,7 @@
 						echo t('Welcome ') . '<strong>' . l($user->name, 'user') . '</strong>! &nbsp;&nbsp;&nbsp;&nbsp; ' . l(t('Logout'), 'logout');
 					}
 				?>
+				</div>
         <?php echo $search_box; ?>
 			</div>
 		</div>

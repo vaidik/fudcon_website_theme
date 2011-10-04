@@ -331,14 +331,15 @@ body {
 
 .top_bar_container {
 	background: #1a2846;
-	padding-top: 2px;
-	padding-bottom: 1px;
 }
 
 #top_bar {
 	width:955px;
   margin-left:auto;
   margin-right:auto;
+
+	padding-top: 2px;
+	padding-bottom: 4px;
 
 	font-size: 12px;
 	text-transform: uppercase;
@@ -470,38 +471,25 @@ ul {
 #search-theme-form {
 	display: inline-block;
 	margin-left: 20px;
+
+	height: 19px;
 }
+
 
 #search-theme-form input[type="text"] {
 	padding: 3px;
 	background: #34466a;
 	font-size: 11px;
 	border: 0;
+
 	width: 200px;
+	height: 13px;
 
 	color: white;
 }
 
 #search-theme-form input[type="submit"] {
-	margin-left: -7px;
-	padding: 3px;
-	width: 24px;
-
-	font-size: 11px;
-	color: black;
-
-	border: 0;
-	background: #34466a;
-	background-image: url('../images/fudcon/search.jpg');
-
-	-moz-box-shadow: none;
-	-webkit-box-shadow: none;
-	text-shadow: none;
-	-moz-border-radius: 0;
-	-webkit-border-radius: 0;
-	border-radius: 0;
-
-	text-indent: -75px;
+	display: none;
 }
 
 #search-theme-form input:focus {
