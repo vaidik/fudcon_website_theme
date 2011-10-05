@@ -147,7 +147,9 @@
 		<div class="header_bar">
       <div class="header">
         <div class="logo_top">
-          <a href="<?php print $front_page; ?>" title="FUDCon Pune 2011" rel="home" id="logo"><img src="<?php echo 'sites/all/themes/fudcon/images/fudcon/logo-pune-long.png'; ?>" height="82" /></a>
+          <!--<a href="<?php print $front_page; ?>" title="FUDCon Pune 2011" rel="home" id="logo"><img src="<?php echo $base_url . 'sites/all/themes/fudcon/images/fudcon/logo-pune-long.png'; ?>" height="82" /></a>-->
+					<?php global $base_url; ?>
+          <a href="<?php print $front_page; ?>" title="FUDCon Pune 2011" rel="home" id="logo"><img src="<?php echo $base_url . '/sites/all/themes/fudcon/images/fudcon/logo-pune-long.png'; ?>" height="82" /></a>
         </div>
         <div class="main_menu">
 
