@@ -68,6 +68,7 @@ ul.sf-menu li li li.sfHover ul {
 	color: #CCC;
 	font-size: 16px;
 	text-transform: uppercase;
+	font-weight: bold;
 }
 .sf-menu li:hover a {
 	background:	#294172;
@@ -91,6 +92,7 @@ ul.sf-menu li li li.sfHover ul {
 }
 .sf-menu li li a {
 	color: #CCC;
+	font-weight: normal;
 }
 .sf-menu li li a:hover {
 	color: #CCC;
