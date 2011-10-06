@@ -257,6 +257,10 @@
             <?php echo $footer; ?>
           </div>
         <?php endif; ?>
+
+				<?php if ($footer_message): ?>
+          <div id="footer-message"><?php print $footer_message; ?></div>
+        <?php endif; ?>
       </div>
 
     </div>
