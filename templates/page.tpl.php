@@ -205,7 +205,7 @@
           <div class="messages"><?php echo $messages; ?></div>
         <?php endif; ?>
 
-        <div class="content_container">
+        <div class="content_container"<?php if (!$sidebar_first) { echo "style=\"width: 100%;\""; } ?>>
           <?php if ($tabs): ?>
             <div class="tabs"><?php print $tabs; ?></div>
             <div style="clear: both;"></div>
