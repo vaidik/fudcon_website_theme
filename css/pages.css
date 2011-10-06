@@ -511,7 +511,7 @@ ul {
 	z-index: 0;
 }
 
-.splash_content {
+#splash_content {
   width:960px;
   height: auto;
   margin-left: auto;
@@ -527,11 +527,7 @@ ul {
 	color: #729FCF;
 }
 
-.splash_text_complete {
-  width: 100%;
-}
-
-#splash_text h2 {
+#splash_content h2 {
   color: white;
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: bold;
@@ -542,6 +538,7 @@ ul {
 .splash_img_mil {
   width:64%;
   height:auto;
+	color: #729FCF;
   float:right;
 }
 

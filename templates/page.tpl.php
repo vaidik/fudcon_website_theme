@@ -180,11 +180,11 @@
 
 		<?php if ($splash_left || $splash_right): ?>
     <div class="splash_container">
-      <div class="splash_content">
-        <div id="splash_text"<?php if (!$splash_right) { echo " class=\"splash_text_complete\""; } ?>>
+      <div id="splash_content">
+        <div id="splash_text"<?php if (!$splash_right) { echo " style=\"width: 100%;\""; } ?>>
           <?php echo $splash_left; ?>
         </div>
-        <div class="splash_img_mil">
+        <div class="splash_img_mil"<?php if (!$splash_left) { echo " style=\"width: 100%;\""; } ?>>
           <?php echo $splash_right; ?>
         </div>
       </div>
