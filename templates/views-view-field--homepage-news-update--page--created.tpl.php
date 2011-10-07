@@ -23,7 +23,7 @@
 <?php
 	$date_parts = explode(' ', $output);
 ?>
-<div style="float: right;cursor: default; line-height: 14px; background: #1A2846; font-weight: bold; width: 40px; padding: 5px; color: white; font-size: 13px; text-transform: uppercase; text-align:center; -moz-box-shadow: 0 1px 3px #272727; -webkit-box-shadow: 0 1px 3px #272727; box-shadow: 0 1px 3px #272727;">
+<div style="float: right;cursor: default; line-height: 14px; background: #1A2846; font-weight: bold; width: 40px; padding: 5px; color: white; font-size: 13px; text-transform: uppercase; text-align:center; -moz-box-shadow: 0 1px 3px #272727; -webkit-box-shadow: 0 1px 3px #272727; box-shadow: 0 1px 3px #272727; margin-left: 8px;">
 	<div><?php print $date_parts[0]; ?></div>
 	<div style="font-size: 28px; font-weight: normal; margin-top: 6px; margin-bottom: 5px;"><?php print $date_parts[1]; ?></div>
 	<div><?php print $date_parts[2]; ?></div>
