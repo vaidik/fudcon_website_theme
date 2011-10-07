@@ -26,6 +26,7 @@ ul.primary {
 ul.primary li {
   float: left; /* LTR */
   margin: 0;
+	margin-right: 2px;
   padding: 0;
 }
 
@@ -37,9 +38,22 @@ ul.primary li a {
   border-width: 0;
   font-weight: bold;
   text-decoration: none;
-  color: #777;
-  background-color: transparent;
-  background: url(../images/tab-left.png) no-repeat left -38px;
+  color: #e2e2e2;
+  background-color: #294172;
+ /** background: url(../images/tab-left.png) no-repeat left -38px; */
+
+	border: 2px solid #294172;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-topleft: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-top-left-radius: 5px;
+
+	-moz-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+	-webkit-transition: all 0.3s linear;
+	transition: all 0.3s linear;
 }
 
 ul.primary li a .tab {
@@ -49,34 +63,32 @@ ul.primary li a .tab {
   padding: 4px 13px 0 6px;
   border-width: 0;
   line-height: 20px;
-  background: url(../images/tab-right.png) no-repeat right -38px;
+  /**background: url(../images/tab-right.png) no-repeat right -38px;*/
 }
 
 ul.primary li a:hover,
 ul.primary li a:focus {
-  border-width: 0;
-  background-color: transparent;
-  background: url(../images/tab-left.png) no-repeat left -76px;
+  background-color: #1A2846;
+	border: 2px #1A2846 solid;
+  /**background: url(../images/tab-left.png) no-repeat left -76px;**/
 }
 
 ul.primary li a:hover .tab,
 ul.primary li a:focus .tab {
-  background: url(../images/tab-right.png) no-repeat right -76px;
+  /**background: url(../images/tab-right.png) no-repeat right -76px;*/
 }
 
 ul.primary li.active a,
 ul.primary li.active a:hover,
 ul.primary li.active a:focus {
-  border-width: 0;
-  color: #000;
-  background-color: transparent;
-  background: url(../images/tab-left.png) no-repeat left 0;
+  color: #294172;
+  background-color: #bbb;
+	border: 2px solid #bbb;
 }
 
 ul.primary li.active a .tab,
 ul.primary li.active a:hover .tab,
 ul.primary li.active a:focus .tab {
-  background: url(../images/tab-right.png) no-repeat right 0;
 }
 
 ul.secondary {
@@ -100,7 +112,7 @@ ul.secondary a {
   height: 24px;
   margin: 0;
   padding: 0;
-  border: 1px solid #c0c0c0;
+  border: 1px solid black;
   text-decoration: none;
   color: #777;
   background: url(../images/tab-secondary.png) repeat-x left -56px;
