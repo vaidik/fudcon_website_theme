@@ -555,6 +555,14 @@ a.splash_link {
 	-moz-box-shadow: 0 1px 3px #272727;
 	-webkit-box-shadow: 0 1px 3px #272727;
 	box-shadow: 0 1px 3px #272727;
+
+	font-weight: bold;
+	font-size: 12px;
+	text-shadow: black 0 1px 1px;
+}
+
+a.splash_link:hover {
+	background: #0a67c6;
 }
 
 #splash_content h2 {
