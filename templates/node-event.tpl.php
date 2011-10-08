@@ -71,6 +71,52 @@
  * @see zen_process()
  */
 ?>
+
+<?php
+function get_month($month) {
+	switch ($month) {
+		case 1:
+			$mon = 'Jan';
+			break;
+		case 2:
+			$mon = 'Feb';
+			break;
+		case 3:
+			$mon = 'Mar';
+			break;
+		case 4:
+			$mon = 'Apr';
+			break;
+		case 5:
+			$mon = 'May';
+			break;
+		case 6:
+			$mon = 'Jun';
+			break;
+		case 7:
+			$mon = 'Jul';
+			break;
+		case 8:
+			$mon = 'Aug';
+			break;
+		case 9:
+			$mon = 'Sep';
+			break;
+		case 10:
+			$mon = 'Oct';
+			break;
+		case 11:
+			$mon = 'Nov';
+			break;
+		case 12:
+			$mon = 'Dec';
+			break;
+		
+	}
+	return $mon;
+}
+?>
+
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix">
   <?php print $user_picture; ?>
 
@@ -126,20 +172,20 @@
 			<div style="font-size: 22px; padding-bottom: 0px; background: #294172; margin: 0px;">Date</div>
 			<div style="line-height: 14px; padding: 8px;">
 				<div style="display: inline-block; width: 50px; border: 0px red solid;">
-					<div><?php echo $date1[0][1]; ?></div>
+					<div><?php echo get_month($date1[0][1]); ?></div>
 					<div style="font-size: 28px; font-weight: normal; margin-top: 6px; margin-bottom: 5px;"><?php echo $date1[0][2]; ?></div>
 					<div><?php echo $date1[0][0]; ?></div>
-					<?php if ($date2[1]): ?>
-						<div style="border-top: 0px dotted #e2e2e2; padding-top: 3px; margin-top: 3px;"><?php echo $date1[1][0] . ':' . $date1[1][1] . ':' .$date1[1][2]; ?></div>
+					<?php if ($date1[1]): ?>
+						<div style="border-top: 1px dotted #e2e2e2; padding-top: 3px; margin-top: 4px;"><?php echo $date1[1][0] . ':' . $date1[1][1] . ':' .$date1[1][2]; ?></div>
 					<?php endif; ?>
 				</div>
 				<div style="display: inline-block; width: 30px; margin-left: 10px; margin-right: 10px; border: 0px red solid; height: 50%; position: relative; top: -30px;">TO</div>
 				<div style="display: inline-block; width: 50px; border: 0px red solid;">
-					<div><?php echo $date2[0][1]; ?></div>
+					<div><?php echo get_month($date2[0][1]); ?></div>
 					<div style="font-size: 28px; font-weight: normal; margin-top: 6px; margin-bottom: 5px;"><?php echo $date2[0][2]; ?></div>
 					<div><?php echo $date2[0][0]; ?></div>
 					<?php if ($date2[1]): ?>
-						<div style="border-top: 1px dotted #e2e2e2; padding-top: 3px; margin-top: 3px;"><?php echo $date2[1][0] . ':' . $date2[1][1] . ':' .$date2[1][2]; ?></div>
+						<div style="border-top: 1px dotted #e2e2e2; padding-top: 3px; margin-top: 4px;"><?php echo $date2[1][0] . ':' . $date2[1][1] . ':' .$date2[1][2]; ?></div>
 					<?php endif; ?>
 				</div>
 			</div>
