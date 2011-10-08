@@ -134,7 +134,7 @@
           if (isset($node->content['field_speakers']['field']['items']['#node']->field_session_room[0]['safe']['title'])) {
             $rooms = $node->content['field_speakers']['field']['items']['#node']->field_session_room;
         ?>
-	          <div style="font-size: 22px; padding-bottom: 0px; padding-left: 6px; padding-right: 6px; background: #294172; margin: 0px;">Rooms</div>
+	          <div style="font-size: 22px; padding-bottom: 0px; padding-left: 6px; padding-right: 6px; background: #294172; margin: 0px;">Room</div>
 						<div style="padding-bottom: 6px;">
 			        <?php foreach($rooms as $room) { ?>
       		      <div style="margin-top: 6px;"><strong><?php echo $room['safe']['title']; ?></strong></div>
