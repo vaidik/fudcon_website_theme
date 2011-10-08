@@ -716,3 +716,39 @@ a.splash_link:hover {
   text-transform: uppercase;
   color: #729FCF;
 }
+
+/**
+=============================== Schedule Theme ==============================
+*/
+
+.fad2schedule {}
+
+.fad2schedule h2 {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.fad2schedule table {
+	width: 100%;
+}
+
+.fad2schedule table td {
+	padding: 8px;
+}
+
+.fad2schedule table th {
+	padding: 8px;
+}
+
+.fad2schedule .head-row {
+	border-bottom: 3px solid #1A2846;
+}
+
+.fad2schedule .time-label {
+	width: 100px;
+	text-align: center;
+}
+
+.fad2schedule .session-calendar {
+}
+
