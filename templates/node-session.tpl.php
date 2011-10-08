@@ -113,36 +113,36 @@
 
 		<div style="border: 0px solid red; width: auto; float: right;">
       <div style="float: right;cursor: default; background: #1A2846; font-weight: bold; width: auto; padding: 0px; color: white; font-size: 13px; text-transform: uppercase; text-align:center; -moz-box-shadow: 0 1px 3px #272727; -webkit-box-shadow: 0 1px 3px #272727; box-shadow: 0 1px 3px #272727; margin-left: 8px; text-shadow: black 0 1px 1px;">
-        <div style="font-size: 22px; padding-bottom: 0px; padding-left: 6px; padding-right: 6px; background: #294172; margin: 0px;">Schedule</div>
-        <div style="line-height: 14px; padding: 8px;">
-          <div style="display: inline-block; width: 50px; border: 0px red solid;">
-            <div><?php echo substr($slot[1], 0, 3); ?></div>
-            <div style="font-size: 28px; font-weight: normal; margin-top: 6px; margin-bottom: 5px;"><?php echo $slot[0]; ?></div>
-            <div>2011</div>
-          </div>
+				<?php if (isset($slot)): ?>
+  	      <div style="font-size: 22px; padding-bottom: 0px; padding-left: 6px; padding-right: 6px; background: #294172; margin: 0px;">Schedule</div>
+	        <div style="line-height: 14px; padding: 8px;">
+        	  <div style="display: inline-block; width: 50px; border: 0px red solid;">
+      	      <div><?php echo substr($slot[1], 0, 3); ?></div>
+    	        <div style="font-size: 28px; font-weight: normal; margin-top: 6px; margin-bottom: 5px;"><?php echo $slot[0]; ?></div>
+  	          <div>2011</div>
+	          </div>
 
-          <div style="display: inline-block; width: 50px; border: 0px red solid;">
-            <div><?php echo $slot[2]; ?></div>
-            <div style="font-size: 28px; font-weight: normal; margin-top: 6px; margin-bottom: 5px;">To</div>
-            <div><?php echo $slot[4]; ?></div>
-          </div>
-        </div>
+          	<div style="display: inline-block; width: 50px; border: 0px red solid;">
+        	    <div><?php echo $slot[2]; ?></div>
+      	      <div style="font-size: 28px; font-weight: normal; margin-top: 6px; margin-bottom: 5px;">To</div>
+    	        <div><?php echo $slot[4]; ?></div>
+  	        </div>
+	        </div>
+				<?php endif; ?>
 
         <?php
           if (isset($node->content['field_speakers']['field']['items']['#node']->field_session_room[0]['safe']['title'])) {
             $rooms = $node->content['field_speakers']['field']['items']['#node']->field_session_room;
         ?>
-          <div style="font-size: 22px; padding-bottom: 0px; padding-left: 6px; padding-right: 6px; background: #294172; margin: 0px;">Rooms</div>
-        <?php
-          foreach($rooms as $room) {
-        ?>
-            <div style=""><strong><?php echo $room['safe']['title']; ?></strong></div>
-        <?php
-            }
-          }
-        ?>
-        </div>
+	          <div style="font-size: 22px; padding-bottom: 0px; padding-left: 6px; padding-right: 6px; background: #294172; margin: 0px;">Rooms</div>
+						<div style="padding-bottom: 6px;">
+			        <?php foreach($rooms as $room) { ?>
+      		      <div style="margin-top: 6px;"><strong><?php echo $room['safe']['title']; ?></strong></div>
+		    	    <?php } ?>
+						</div>
+          <?php } ?>
       </div>
+    </div>
 
 		<h3>Presented by:</h3>
 		<?php
@@ -154,8 +154,6 @@
 			<div><?php echo $speaker; ?></div>
 		<?php endforeach; ?>
 
-	</div>
-		
 		<p><?php echo $content['body']['#value']; ?></p>
 
 		<?php $slides = $node->content['field_speakers']['field']['items']['#node']->field_slides; ?>
