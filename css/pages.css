@@ -740,7 +740,7 @@ a.splash_link:hover {
 	padding: 8px;
 }
 
-.fad2schedule .head-row {
+.head-row {
 	border-bottom: 3px solid #1A2846;
 }
 
@@ -752,3 +752,12 @@ a.splash_link:hover {
 .fad2schedule .session-calendar {
 }
 
+.views-field-field-experience-value {
+	width: 18%;
+	text-align: center;
+}
+
+.views-field-field-track-value {
+	width: 10%;
+	text-align: center;
+}
