@@ -128,6 +128,7 @@
 	<div class="top_bar_container">
 		<div id="top_bar">
 			<div class="user_menu">
+				<div style="display:inline-block; padding-top:2px; float: left; font-weight: bold;"><a href="/contact">Contact Us</a></div>
 				<?php global $user; ?>
 				<div style="display: inline-block; padding-top: 2px;">
 				<?php
